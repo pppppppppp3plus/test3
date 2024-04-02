@@ -10,3 +10,8 @@ jobs:
       group: ${{ github.workflow }}-${{ github.ref }}
     steps:
       - run: echo "Hello World"
+
+      - name: Setup Hugo
+        uses: peaceiris/actions-hugo@v2
+        with:
+          hugo-version: '0.124.1'
