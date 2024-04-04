@@ -11,6 +11,11 @@ jobs:
     steps:
       - run: echo "Hello World"
 
+      - uses: actions/checkout@v3
+        with:
+          submodules: false
+          fetch-depth: 0
+
       - name: Setup Hugo
         uses: peaceiris/actions-hugo@v2
         with:
