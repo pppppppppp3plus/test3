@@ -1,9 +1,12 @@
 name: command
-on: [push]
+
+on:
+  [push]
+
 jobs:
   command:
     name: Use Linux commands
     runs-on: ubuntu-latest
     steps:
-      -name: Show ubuntu details
+      - name: Show ubuntu details
         run: lsb_release -a
