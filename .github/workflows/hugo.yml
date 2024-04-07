@@ -39,3 +39,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - run: echo "Hello World2"
+
+      - uses: actions/deploy-pages@v2
+        id: deployment
