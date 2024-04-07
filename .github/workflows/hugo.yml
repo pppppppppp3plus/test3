@@ -4,7 +4,7 @@ on:
   [push]
 
 jobs:
-  deploy:
+  build:
     runs-on: ubuntu-latest
     concurrency:
       group: ${{ github.workflow }}-${{ github.ref }}
@@ -24,7 +24,7 @@ jobs:
       - name: Build
         run: hugo --minify
 
-      - name: Deploy
+      - name: upload
         uses: actions/upload-pages-artifact@v1
         with:
-          path: build
+          path: out
